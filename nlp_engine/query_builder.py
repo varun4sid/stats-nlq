@@ -32,10 +32,10 @@ def generate_and_execute_sql(validated_data, db_path='data/box_scores.db'):
         if player is None:
             return {"error": "Missing player name for single player query."}
             
-        stat_select = "*" if stat == "*" else f"{stat} as {stat.upper()}"
+        stat_select = "*" if stat == "*" else f"player_name as PLAYER, {stat} as {stat.upper()}"
         date_select = "" if stat == "*" else "date as DATE, "
         
-        query = f"SELECT {date_select}player_name as PLAYER, {stat_select} FROM player_box_scores WHERE player_name = '{player}'"
+        query = f"SELECT {date_select} {stat_select} FROM player_box_scores WHERE player_name = '{player}'"
         
         if date_constraint:
              query += f" AND date = '{date_constraint}'"
