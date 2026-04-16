@@ -1,0 +1,10 @@
+streamlit
+scikit-learn
+spacy
+pandas
+nba_api
+fuzzywuzzy
+python-Levenshtein
+python-crfsuite
+sklearn-crfsuite
+joblib
