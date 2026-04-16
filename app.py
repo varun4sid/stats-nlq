@@ -1,15 +1,17 @@
 import streamlit as st
-import pandas as pd
 from nlp_engine.pipeline import process_query
 from nlp_engine.query_builder import generate_and_execute_sql
-import os
 
-st.set_page_config(page_title="StatMuse Clone MVP", layout="centered")
+st.set_page_config(page_title="Stats NLQ", layout="centered")
 
-st.title("🏀 StatMuse Mini")
+st.title("🏀 Stats NLQ")
 st.markdown("Ask natural language queries about NBA player and team stats.")
 
-st.info("Example queries:\n- **LeBron James points last game**\n- **Steph Curry statline last 5 games**\n- **Lakers total rebounds last 3 games**\n- **Who scored the most points for the Warriors last game?**")
+st.info("""Example queries:
+        \n- LeBron James points last game
+        \n- Steph Curry statline last 5 games
+        \n- Lakers total rebounds last 3 games
+        \n- Who scored the most points for the Warriors last game?""")
 
 query = st.text_input("Enter your basketball query:")
 
