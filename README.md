@@ -1,4 +1,4 @@
-# 🏀 StatMuse Clone (NLIDB)
+# 🏀 Stat NLQ
 
 A Natural Language Interface to a Database (NLIDB) that translates conversational English queries about basketball statistics directly into executed SQL queries. 
 
